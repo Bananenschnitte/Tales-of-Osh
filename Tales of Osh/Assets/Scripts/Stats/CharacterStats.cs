@@ -1,14 +1,35 @@
 using UnityEngine;
 
 /* Contains all the stats for a character. */
-
+/// <summary>
+/// Contains all the stats for a character
+/// Stores the max and current Health
+/// The Damage the character deals 
+/// and so on
+/// </summary>
 public class CharacterStats : MonoBehaviour {
 
-	public Stat maxHealth;			// Maximum amount of health
-	public int currentHealth {get;protected set;}	// Current amount of health
+	/// <summary>
+	/// Maximum amount of health
+	/// </summary>
+	public Stat maxHealth;
 
-	public Stat damage;
-	public Stat armor;
+	/// <summary>
+	/// Current amount of health
+	/// </summary>
+	/// <returns>The current amount of health</returns>
+	public int currentHealth {get;protected set;}
+
+	/// <summary>
+	/// The Attackspeed in seconds
+	/// 
+	/// TODO: Maybe better as 'Stat'-Object?
+	/// </summary>
+	/// <returns></returns>
+	public float attackSpeed {get;protected set;}
+
+	public Stat damage;				// not used yet
+	public Stat armor;				//	not used yet
 
 	public event System.Action OnHealthReachedZero;
 
@@ -16,13 +37,12 @@ public class CharacterStats : MonoBehaviour {
 		currentHealth = maxHealth.GetValue();
 	}
 
-	// Start with max HP.
-	public virtual void Start () {
-		
-	}
-
-	// Damage the character
+	/// <summary>
+	/// Deals Damage to the Character
+	/// </summary>
+	/// <param name="damage">The amount of damage to deal</param>
 	public void TakeDamage (int damage) {
+
 		// Subtract the armor value - Make sure damage doesn't go below 0.
 		damage -= armor.GetValue();
 		damage = Mathf.Clamp(damage, 0, int.MaxValue);
@@ -39,7 +59,10 @@ public class CharacterStats : MonoBehaviour {
 		}
 	}
 
-	// Heal the character.
+	/// <summary>
+	/// Heals the Character
+	/// </summary>
+	/// <param name="amount">The Amount of hitpoints to heal</param>
 	public void Heal (int amount) {
 		currentHealth += amount;
 		currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth.GetValue());

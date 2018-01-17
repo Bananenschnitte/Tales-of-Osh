@@ -28,7 +28,6 @@ public class RagdollManager : MonoBehaviour {
 
 			if (t.GetComponent<FixedJoint> ()) {
 				//t.GetComponent<FixedJoint> ().breakForce = 100;
-
 				//t.GetComponent<FixedJoint> ().breakTorque = 100;
 			}
 		}

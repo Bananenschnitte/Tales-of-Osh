@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Display and handling the Health Graphic Elemetns.
+/// </summary>
 public class HealthUI : MonoBehaviour {
 
 	const float stayTime = 3;
@@ -57,6 +60,6 @@ public class HealthUI : MonoBehaviour {
 	/// </summary>
 	/// <returns>The current Health in Percent</returns>
 	float GetHealthPercent() {
-		return Mathf.Clamp01(stats.currentHealth / (float)stats.maxHealth.GetValue ());
+		return Mathf.Clamp01(stats.currentHealth / (float) stats.maxHealth.GetValue ());
 	}
 }
