@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 308, y: 221}
   m_MaxSize: {x: 8008, y: 4021}
   vertical: 0
-  controlID: 135
+  controlID: 106
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 308, y: 342}
   m_MaxSize: {x: 8008, y: 8042}
   vertical: 1
-  controlID: 169
+  controlID: 105
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 52
+  controlID: 28
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,7 +216,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1037
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &10
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_MinSize: {x: 817, y: 492}
   m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 202
+  controlID: 104
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -648,18 +648,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Stats
+    - Assets/Scripts/Controllers
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Stats
+  - Assets/Scripts/Controllers
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GameDev\Tales-of-Osh\Tales of Osh
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76270000
-    m_LastClickedID: 10102
+    m_SelectedIDs: de290000
+    m_LastClickedID: 10718
     m_ExpandedIDs: 0000000068270000aa2b00002a2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -719,18 +719,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 80450000b04600002263000062090000f20900002a1a00005e09000080e0ffff141e00004e0500008cf3ffff540b00003a1b000014120000681200004c0500002c160000441d0000360b0000321600008e2d00005e4a000098220000e81f00008a3d00007e610000c26f0000320b0000ea770000841200000c610000f86e0000fe820000dabf000038fb00002c2601008abf01001cd901009ce0010014e8010084fe010094120000683302001a1300008edb0000440b00009a7dfdffe4770100fe0d000062450000ba0c0000a43e0000183f000076410000662a0000682a00004c2200006c2a00001865000040220000422200005828000064260000b02c000050220000a24b00002e2c0000342c000000000000f8300000a6320000cc380000d0380000a6380000d2260000d0d7ffff4e290000922900008424000094290000862900009829000018efffff8c240000d4260000fc2a000068abfeff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CharacterStats
-      m_OriginalName: CharacterStats
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 1890
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
@@ -771,9 +771,9 @@ MonoBehaviour:
     height: 509
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62070000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 5cfaffff62faffff8cfbffff000000007c2e0000ac2e0000
+    m_SelectedIDs: ba2e0000
+    m_LastClickedID: 11962
+    m_ExpandedIDs: 8cfbffff00000000ac2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

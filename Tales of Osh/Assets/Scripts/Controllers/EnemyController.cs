@@ -25,6 +25,11 @@ public class EnemyController : MonoBehaviour {
 	/// </summary>
 	public float attackRange = 1f;
 
+	/// <summary>
+	/// The Time in Seconds the character has a cooldown to the next attaack
+	/// </summary>
+	public float attackCooldown = 2f;
+
 
 	/// <summary>
 	/// The Target to attack.
@@ -44,6 +49,12 @@ public class EnemyController : MonoBehaviour {
 	/// </summary>
 	[SerializeField]
 	private CharacterCombat combatManager;
+
+	/// <summary>
+	/// The Time the character has attacked last.
+	/// It is used to calculate the cooldown, if the character is allowed to attack again.
+	/// </summary>
+	private float lastAttackTime = 0f;
 
 	void Start() {
 		target = Player.instance.transform;
@@ -91,13 +102,16 @@ public class EnemyController : MonoBehaviour {
 	/// </summary>
 	private void FaceTarget () {
 		Vector3 direction = (target.position - transform.position).normalized;
+		if (direction != Vector3.zero) {
+			return;
+		}
 		Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 	}
 
 	/// <summary>
 	/// Draws a gizmo if the object is selected.
-	/// It's used to show the look-range of the enemy
+	/// It's used to show the look- and attack-range of the enemy
 	/// </summary>
 	void OnDrawGizmosSelected () {
 		Gizmos.color = Color.red;
@@ -112,7 +126,21 @@ public class EnemyController : MonoBehaviour {
 	/// 
 	/// </summary>
 	private void attack () {
-		Debug.Log("Attack....");
+		if (getIsAllowedToAttack()) {
+			Debug.Log("Attack....");
+			lastAttackTime = Time.time;
+		}
 		combatManager.Attack(Player.instance.playerStats);
+	}
+
+	/// <summary>
+	/// Determines if the Character is allowed to attack. (Cooldown)
+	/// </summary>
+	/// <returns>Returns TRUE if the Character is allowed to attack. Returns false otherwise</returns>
+	private bool getIsAllowedToAttack() {
+		if ((lastAttackTime + attackCooldown) > Time.time) {
+			return false;
+		}
+		return true;
 	}
 }
