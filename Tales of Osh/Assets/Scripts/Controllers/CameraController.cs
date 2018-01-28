@@ -116,7 +116,7 @@ public class CameraController : MonoBehaviour {
 	/// <param name="z">The amount of the movement in the y-Axis</param>
 	private void moveCamera(float x, float z) {
 		Vector3 offset = new Vector3(x, 0, z);
-		Debug.Log("[CameraController] (z=" + z + ") (x=" + x + ")");
+		// Debug.Log("[CameraController] (z=" + z + ") (x=" + x + ")");
 		cam.transform.position = cam.transform.position + offset;
 	}
 

@@ -29,7 +29,7 @@ public class CharacterCombat : MonoBehaviour {
 			this.enemyStats = enemyStats;
 			attackCountdown = 1f / attackRate;
 
-			StartCoroutine(DoDamage(enemyStats,.6f));
+			StartCoroutine(DoDamage(enemyStats, .6f));
 
 			if (OnAttack != null) {
 				OnAttack ();
@@ -39,10 +39,10 @@ public class CharacterCombat : MonoBehaviour {
 
 
 	IEnumerator DoDamage(CharacterStats stats, float delay) {
-		print ("Start");
+		// print ("Start");
 		yield return new WaitForSeconds (delay);
 	
-		Debug.Log (transform.name + " swings for " + myStats.damage.GetValue () + " damage");
+		Debug.Log ("[CharacterCombat] " + transform.name + " swings for " + myStats.damage.GetValue () + " damage");
 		enemyStats.TakeDamage (myStats.damage.GetValue ());
 	}
 

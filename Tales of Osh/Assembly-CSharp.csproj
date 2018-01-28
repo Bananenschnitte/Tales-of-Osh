@@ -67,8 +67,6 @@
      <Compile Include="Assets\Scripts\Stats\Stat.cs" />
      <Compile Include="Assets\Scripts\Stats\StatModifier.cs" />
      <Compile Include="Assets\ToDos.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Knight\shaders\particledistort.shader" />
