@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Anim\CharacterAnimator.cs" />
      <Compile Include="Assets\Scripts\Anim\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\CharacterCombat.cs" />
+     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
      <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
      <Compile Include="Assets\Scripts\HealthUI.cs" />
@@ -65,7 +66,7 @@
      <Compile Include="Assets\Scripts\Stats\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\Stats\Stat.cs" />
      <Compile Include="Assets\Scripts\Stats\StatModifier.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
+     <Compile Include="Assets\ToDos.cs" />
      <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
